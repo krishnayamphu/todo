@@ -8,9 +8,9 @@ import javafx.stage.Stage;
 public class TodoApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(TodoApp.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(TodoApp.class.getResource("todo.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Todo List");
         stage.setScene(scene);
         stage.show();
     }

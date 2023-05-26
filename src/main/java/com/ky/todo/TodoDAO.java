@@ -38,4 +38,16 @@ public class TodoDAO {
             throw new RuntimeException(e);
         }
     }
+
+    public static void deleteTodo(int id) {
+        try {
+            Connection cn = ConnectDB.connect();
+            String sql = "DELETE  FROM todolist WHERE id=?";
+            PreparedStatement ps = cn.prepareStatement(sql);
+            ps.setInt(1,id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
